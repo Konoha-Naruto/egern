@@ -1,0 +1,115 @@
+# 规则名称: AppleServices
+# 规则统计: 99
+# 说明: APNs、账号/激活、iCloud 等基础服务（不含下载类）
+# 来源: https://raw.githubusercontent.com/Konoha-Naruto/surge/main/rules/apple/AppleServices.list
+
+no_resolve: true
+
+domain_set:
+  - appleid.apple.com
+  - appleid.cdn-apple.com
+  - gsa.apple.com
+  - identity.apple.com
+  - idmsa.apple.com
+
+domain_suffix_set:
+  - aaplimg.com
+  - akadns.net
+  - apple-cloudkit.com
+  - apple-dns.net
+  - apple-icloud.cn
+  - apple-livephotoskit.com
+  - apple.com
+  - appleicloud.cn
+  - applemx-icloud.com
+  - apzones.com
+  - cdn-apple.com
+  - gc.apple.com
+  - icloud-apple.cn
+  - icloud-content.com
+  - icloud-content.com.cn
+  - icloud-isupport.com
+  - icloud-sandbox.com
+  - icloud.apple.com
+  - icloud.ch
+  - icloud.cn
+  - icloud.com
+  - icloud.com.cn
+  - icloud.de
+  - icloud.ee
+  - icloud.fi
+  - icloud.fr
+  - icloud.hu
+  - icloud.ie
+  - icloud.is
+  - icloud.jp
+  - icloud.lv
+  - icloud.net.cn
+  - icloud.om
+  - icloud.org
+  - icloud.pt
+  - icloud.ro
+  - icloud.se
+  - icloud.si
+  - icloud.sk
+  - icloud.vn
+  - icloudads.net
+  - icloudapple.cn
+  - icloudbox.net
+  - icloudbrowser.net
+  - icloude.com
+  - icloudhome.com
+  - icloudmail.net
+  - icloudmusic.net
+  - icloudnet.net
+  - icloudo.com
+  - icloudo.de
+  - icloudo.net
+  - icloudos.de
+  - icloudos.net
+  - icloudpay.net
+  - icloudsecure.net
+  - icloudsetup.com
+  - ios-icloud.com
+  - iwork.apple.com
+  - me.com
+  - myicloud.net
+  - mylcloud.net
+  - push.apple.com
+  - www-cdn.icloud.com.akadns.net
+  - wwwicloud.com
+
+domain_keyword_set:
+  - apple-support.akadns.net
+  - apple.com.akadns.net
+  - apple.com.edgekey.net
+  - buy.itunes.apple.com
+  - icloud.com.akadns.net
+  - smp-device
+  - testflight
+
+ip_cidr_set:
+  - 139.178.128.0/18
+  - 144.178.0.0/19
+  - 144.178.36.0/22
+  - 144.178.48.0/20
+  - 17.0.0.0/8
+  - 17.188.128.0/18
+  - 17.188.20.0/23
+  - 17.249.0.0/16
+  - 17.252.0.0/16
+  - 17.57.144.0/22
+  - 192.35.50.0/24
+  - 198.183.17.0/24
+  - 205.180.175.0/24
+  - 63.92.224.0/19
+  - 65.199.22.0/23
+
+ip_cidr6_set:
+  - 2403:300::/32
+  - 2403:300:a42::/48
+  - 2403:300:a51::/48
+  - 2620:149::/32
+  - 2620:149:a44::/48
+  - 2a01:b740::/32
+  - 2a01:b740:a42::/48

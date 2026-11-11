@@ -4,11 +4,26 @@
 
 ```
 .
+├── rules/apple/     规则集（下载 / 基础服务分开）
 └── modules/
     ├── media/        媒体：会员签到
     ├── monitor/      面板 / 小组件
     └── network/      网络：链路修复、回环
 ```
+
+## 规则集
+
+| 文件 | 说明 | 条数 |
+|---|---|---|
+| `rules/apple/AppleDownload.yaml` | App Store / OTA / 固件下载 | 88 |
+| `rules/apple/AppleServices.yaml` | APNs / iCloud / 账号激活 + `apple.com` 兜底 | 99 |
+
+```
+https://raw.githubusercontent.com/Konoha-Naruto/egern/main/rules/apple/AppleDownload.yaml
+https://raw.githubusercontent.com/Konoha-Naruto/egern/main/rules/apple/AppleServices.yaml
+```
+
+**Download 必须排在 Services 之前**（后者带兜底），详见 [rules/apple/README.md](rules/apple/README.md)。
 
 ## 模块
 
