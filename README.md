@@ -30,6 +30,7 @@ https://raw.githubusercontent.com/Konoha-Naruto/egern/main/rules/apple/AppleServ
 | 属性 | 模块 | 说明 |
 |---|---|---|
 | media | [qqmusic](modules/media/qqmusic/) | QQ音乐签到（Surge 脚本的桥接移植，存储与 Surge 隔离） |
+| media | [bodian-music](modules/media/bodian-music/) | 波点音乐会员/下载/去广告（Surge 脚本的桥接移植，`new Function` 跑 sloppy mode） |
 | monitor | [carrier](modules/monitor/carrier/) | 运营商聚合面板：联通 / 移动 / 电信 / 广电余额、流量、语音 |
 | network | [telegram](modules/network/telegram/) | Telegram 劣化 DC IP 改写，解决一直转圈 |
 | network | [loopback](modules/network/loopback/) | Surge「Local Device Loopback」移植（`10.7.0.1 → reflect`） |
@@ -43,6 +44,7 @@ https://raw.githubusercontent.com/Konoha-Naruto/egern/main/modules/<属性>/<模
 | 模块 | 安装地址 |
 |---|---|
 | QQ音乐签到 | https://raw.githubusercontent.com/Konoha-Naruto/egern/main/modules/media/qqmusic/QQMusic.egern.yaml |
+| 波点音乐 | https://raw.githubusercontent.com/Konoha-Naruto/egern/main/modules/media/bodian-music/BodianMusic.egern.yaml |
 | 运营商面板 | https://raw.githubusercontent.com/Konoha-Naruto/egern/main/modules/monitor/carrier/carrier-hub.yaml |
 | Telegram 垃圾 IP | https://raw.githubusercontent.com/Konoha-Naruto/egern/main/modules/network/telegram/telegram-fktg.yaml |
 | 本地设备回环 | https://raw.githubusercontent.com/Konoha-Naruto/egern/main/modules/network/loopback/LocalDeviceLoopback.egern.yaml |

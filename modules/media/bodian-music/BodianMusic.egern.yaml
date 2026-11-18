@@ -1,0 +1,48 @@
+# 波点音乐（Egern 版）
+# 上游：WeiGiegie/666 · bdyy.js（Surge/QuanX/Loon 自动适配写法）
+# 转换说明：
+#   1. [Script] http-response  -> scriptings.http_response（body_required / max_size 显式写出）
+#   2. 上游脚本加桥执行         -> BodianMusic.egern.js（ctx → $request/$response/$done/$httpClient）
+#   3. [URL Rewrite] reject-200 -> url_rewrites + location: http://reject-200/（Egern 原生 200 空响应）
+#   4. [MITM] 主机名          -> 去重、去端口（Egern 按 hostname 匹配）
+name: 波点音乐（会员·去广告·下载）
+description: 解锁波点音乐 VIP 会员标识、无损与付费专辑下载、付费专辑解锁，移除开屏广告、横幅推广、悬浮广告、商城 Tab 与搜索热词。纯响应体改写，不需要抓 Cookie、不需要签到。建议卸载重装 App 后再启用，旧缓存会残留广告位配置。
+author: WeiGiegie（脚本）/ Konoha-Naruto（Egern 移植）
+homepage: https://github.com/WeiGiegie/666
+icon: music.note
+
+scriptings:
+- http_response:
+    name: 波点音乐
+    match: '^https?:\/\/(?:(?:bd-api|h5app|bodianyin|ab-bodian)\.kuwo\.cn\/(?:api\/(?:ucenter\/users\/(?:pub|login)|play\/(?:music\/v2\/(?:audioUrl|checkRight)|advert\/info)|service\/(?:music\/(?:info|download\/(?:info|config))|home\/module|global\/config\/(?:scene|vipEnter)|banner\/positions|advert\/config)|search\/topic\/word\/list|pay\/(?:vip\/(?:invitation\/(?:assist\/popup|swell)|lowPriceText)|sp\/actVip|audition\/url)|advert\/free\/config|popup\/start\/info|abtest\/ui\/info|rec\/feed)|abtest\/ui\/info)|us\.l\.qq\.com\/exapp|xs\.gdt\.qq\.com\/style_factory\/template_list)'
+    script_url: https://raw.githubusercontent.com/Konoha-Naruto/egern/main/modules/media/bodian-music/BodianMusic.egern.js
+    timeout: 20
+    body_required: true
+    max_size: 2097152
+
+url_rewrites:
+- match: '^https?:\/\/tmeadcomm\.y\.qq\.com\/'
+  location: http://reject-200/
+
+mitm:
+  hostnames:
+  - tmeadcomm.y.qq.com
+  - bd-api.kuwo.cn
+  - '*.kuwo.*'
+  - ad.tencentmusic.com
+  - '*.l.qq.com'
+  - 39.156.123.46
+  - bd-api.kuwo.com
+  - '39.156.12*.*'
+  - h5app.kuwo.cn
+  - bodianimgcdn.kuwo.cn
+  - h5s.kuwo.cn
+  - 39.156.121.20
+  - 111.30.171.170
+  - 39.156.121.21
+  - 101.42.133.54
+  - ab-bodian.kuwo.cn
+  - 39.156.121.65
+  - '39.156.121.*'
+  - 39.156.121.60
+  - xs.gdt.qq.com
